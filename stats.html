@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>访问统计</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    #content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>访问统计页面</h1>
+
+  <!-- 密码输入部分 -->
+  <div id="login">
+    <p>请输入密码以查看访问统计：</p>
+    <input type="password" id="password" placeholder="输入密码" />
+    <button onclick="checkPassword()">提交</button>
+    <p id="error" style="color: red; display: none;">密码错误！</p>
+  </div>
+
+  <!-- 显示内容部分 -->
+  <div id="content">
+    <h2>访问量和地理位置</h2>
+    <div id="map" style="width: 100%; height: 400px; border: 1px solid #ccc;"></div>
+    <p>访问量：<span id="visit-count">0</span></p>
+  </div>
+
+  <script>
+    // 定义密码
+    const PASSWORD = "yourpassword";
+
+    // 检查密码
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const error = document.getElementById("error");
+      if (input === PASSWORD) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("content").style.display = "block";
+        loadMap();
+        updateVisitCount();
+      } else {
+        error.style.display = "block";
+      }
+    }
+
+    // 加载地图（使用 Leaflet.js 或其他地图库）
+    function loadMap() {
+      // 示例使用 Leaflet.js
+      const map = L.map('map').setView([0, 0], 2);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      // 示例：添加标记（可通过 API 动态加载位置数据）
+      L.marker([51.505, -0.09]).addTo(map).bindPopup("访问者来自：伦敦").openPopup();
+    }
+
+    // 更新访问量（使用本地存储示例）
+    function updateVisitCount() {
+      let count = localStorage.getItem("visitCount") || 0;
+      count = parseInt(count) + 1;
+      localStorage.setItem("visitCount", count);
+      document.getElementById("visit-count").innerText = count;
+    }
+  </script>
+
+  <!-- 引入 Leaflet.js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+</html>
