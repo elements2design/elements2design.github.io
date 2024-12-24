@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9N9911MNC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-B9N9911MNC');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description"
+    content="From Elements to Design: A Layered Approach for Automatic Graphic Design Composition">
+  <meta name="viewport" content="width=device-width, initial-scale=0.1">
+  <title>From Elements to Design</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-tooltip.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/gallery.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/gallery.js"></script>
+</head>
+
+<body>
+
+  <!--Title block-->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop" id="top">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">From Elements to Design: A Layered Approach for Automatic Graphic
+              Design Composition</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="https://elements2design.github.io/" target="_blank">Jiawei
+                  Lin</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/shizsu/"
+                  target="_blank">Shizhao Sun</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/dahua/"
+                  target="_blank">Danqing Huang</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://gr.xjtu.edu.cn/web/tingliu/home" target="_blank">Ting
+                  Liu</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://sites.google.com/a/usc.edu/jili/" target="_blank">Ji
+                  Li</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://www.microsoft.com/en-us/research/people/jiabia/"
+                  target="_blank">Jiang Bian</a><sup>2</sup></span>
+            </div>
+            <br>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Xi'an Jiaotong University, <sup>2</sup>Microsoft</span>
+            </div>
+
+            <!-- <div class="is-size-3 publication-authors">
+              <span class="author-block">CVPR 2024 (Highlight)</span> 
+            </div> -->
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://elements2design.github.io/" target="_blank"
+                    class="external-link button is-normal is-rounded">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://elements2design.github.io/" target="_blank"
+                    class="external-link button is-normal is-rounded">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://elements2design.github.io/" target="_blank"
+                    class="external-link button is-normal is-rounded">
+                    <span class="icon">
+                      🤗
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+
+
+            <div class="columns is-centered has-text-centered is-variable is-8">
+              <div class="column is-three-quarters is-centered has-text-centered">
+                <div class="publication-links ">
+
+                  <span class="link-block">
+                    <a href="#gallery" class="nav-link button-55 is-normal">
+                      <span>Gallery</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="#method" class="nav-link button-55 is-normal">
+                      <span>Method</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="#comparisons" class="nav-link button-55 is-normal">
+                      <span>Comparisons</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="#layerwise" class="nav-link button-55 is-normal">
+                      <span>Layerwise Generation</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="#diversity" class="nav-link button-55 is-normal">
+                      <span>Design Variants</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="#resolution" class="nav-link button-55 is-normal">
+                      <span>Resolution Adjustment</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="#filling" class="nav-link button-55 is-normal">
+                      <span>Element Filling</span>
+                    </a>
+                  </span>
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Video-->
+  <!-- <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    
+        <div class="item">
+          <p style="margin-bottom: 30px">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="static/videos/main_video/video_sketch_new.mp4"
+          type="video/mp4">
+
+        </video>
+        <h6 class="caption">We recommend watching the video with sound on</h6>
+        </p>
+      </div>
+  </div>
+</section> -->
+
+  <!-- Abstract. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this work, we investigate automatic design composition from multimodal graphic elements.
+              Although recent studies have developed various generative models for graphic design, they usually face the
+              following limitations: they only focus on certain subtasks and are far from achieving the design
+              composition task; they do not consider the hierarchical information of graphic designs during the
+              generation process.
+              To tackle these issues, we introduce the layered design principle into Large Multimodal Models (LMMs) and
+              propose a novel approach, called LaDeCo, to accomplish this challenging task.
+              Specifically, LaDeCo first performs layer planning for a given element set, dividing the input elements
+              into different semantic layers according to their contents.
+              Based on the planning results, it subsequently predicts element attributes that control the design
+              composition in a layer-wise manner, and includes the rendered image of previously generated layers into
+              the context.
+              With this insightful design, LaDeCo decomposes the difficult task into smaller manageable steps, making
+              the generation process smoother and clearer.
+              The experimental results demonstrate the effectiveness of LaDeCo in design composition.
+              Furthermore, we show that LaDeCo enables some interesting applications in graphic design, such as
+              resolution adjustment, element filling, design variation, etc.
+              In addition, it even outperforms the specialized models in some design subtasks without any task-specific
+              training.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Gallery-->
+  <section class="section">
+    <div class="container is-widescreen" id="gallery">
+      <div class="link-block ">
+        <a href="#top" class="nav-link button-55 is-normal">
+          <span>Go to Top</span>
+        </a>
+      </div>
+      <div class="link-block ">
+        <a href="more.html" class="nav-link button-55 is-normal">
+          <span>More</span>
+        </a>
+      </div>
+      <div class="section-title has-text-centered is-centered">
+        <h2 class="title is-3">Gallery</h2><br>
+      </div>
+      <div class="container is-max-desktop is-centered has-text-centered new-gallery">
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image215.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image216.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image217.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image218.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image219.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image220.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image221.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image222.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image223.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image224.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image225.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image226.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image227.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image228.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image229.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image230.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image231.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image232.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image233.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image234.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image235.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image236.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image237.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image238.png" alt="image" />
+        </div>
+        <div class="new-gallery-image">
+          <img src="static/images/gallery/image239.png" alt="image" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How does it work? -->
+  <section class="section is-light">
+    <div class="container is-widescreen" id="method">
+      <div class="link-block ">
+        <a href="#top" class="nav-link button-55 is-normal">
+          <span>Go to Top</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="section-title has-text-centered is-centered">
+        <h2 class="title is-3">How does it work?</h2><br>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-3">Design Principle</h2>
+          <img src="static/images/method/principle.png" />
+          <div class="content has-text-justified">
+            Since a holistic design can be divided into different layers according to element semantics, we
+            achieve the design composition task in a layer-by-layer manner.
+          </div>
+        </div>
+      </div>
+
+      <div class="is-max-desktop columns is-centered has-text-centered">
+        <div class="column is-two-fifths has-text-centered">
+          <h2 class="title is-3">Layer Planning</h2>
+          <img src="static/images/method/layer_planning.png" />
+          <div class="content has-text-justified">
+            we formulate layer planning as an element content understanding problem and
+            leverage pre-trained LMMs to resolve it.
+          </div>
+        </div>
+        <div class="column is-four-fifths has-text-centered">
+          <h2 class="title is-3">Layerwise Prediction<h2>
+              <img src="static/images/method/layer_generation.png" />
+              <div class="content has-text-justified">
+                We finetune Large Multimodal Models (LMMs) to predict element attributes in a layer-wise manner.
+                After generating each layer, the intermediate designs will
+                be rendered as images and fed back into LMMs to guide subsequent layer generation.
+              </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparisons -->
+  <section class="section">
+    <div class="container is-widescreen" id="comparisons">
+      <div class="link-block ">
+        <a href="#top" class="nav-link button-55 is-normal">
+          <span>Go to Top</span>
+        </a>
+      </div>
+      <div class="section-title has-text-centered is-centered">
+        <h2 class="title is-3">Comparisons to Prior Work</h2><br>
+      </div>
+      <div class="columns is-centered has-text-centered is-variable is-8">
+        <div class="column is-three-fifths is-centered">
+          <div class="prompt_gallery">
+            <div class="captioned_video">
+              <h6 class="caption">FlexDM</h6>
+            </div>
+            <div class="captioned_video">
+              <h6 class="caption">GPT-4o</h6>
+            </div>
+            <div class="captioned_video">
+              <h6 class="caption">Ours</h6>
+            </div>
+            <div class="captioned_video">
+              <h6 class="caption">GT</h6>
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_1_flexdm.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_1_gpt.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_1_ours.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_1_gt.png" alt="bike" />
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_2_flexdm.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_2_gpt.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_2_ours.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_2_gt.png" alt="bike" />
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_3_flexdm.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_3_gpt.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_3_ours.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_3_gt.png" alt="bike" />
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_4_flexdm.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_4_gpt.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_4_ours.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_4_gt.png" alt="bike" />
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_5_flexdm.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_5_gpt.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_5_ours.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_5_gt.png" alt="bike" />
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_6_flexdm.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_6_gpt.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_6_ours.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_6_gt.png" alt="bike" />
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_7_flexdm.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_7_gpt.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_7_ours.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/comparison/case_7_gt.png" alt="bike" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-widescreen" id="layerwise">
+      <div class="link-block ">
+        <a href="#top" class="nav-link button-55 is-normal">
+          <span>Go to Top</span>
+        </a>
+      </div>
+      <div id="layerwise">
+        <div class="section-title has-text-centered is-centered">
+          <h2 class="title is-3">Generation Process</h2><br>
+        </div>
+
+        <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="column is-three-quarters is-centered">
+            <div class="comparisons_gallery">
+              <div class="captioned_video">
+                <h6 class="caption">Background</h6>
+              </div>
+              <div class="captioned_video">
+                <h6 class="caption">+ Underlay</h6>
+              </div>
+              <div class="captioned_video">
+                <h6 class="caption">+ Logo/Image</h6>
+              </div>
+              <div class="captioned_video">
+                <h6 class="caption">+ Text</h6>
+              </div>
+              <div class="captioned_video">
+                <h6 class="caption">+ Embellishment</h6>
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case1_layer1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case1_layer2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case1_layer3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case1_layer4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case1_layer5.png" alt="bike" />
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case2_layer1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case2_layer2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case2_layer3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case2_layer4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case2_layer5.png" alt="bike" />
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case3_layer1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case3_layer2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case3_layer3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case3_layer4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case3_layer5.png" alt="bike" />
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case4_layer1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case4_layer2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case4_layer3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case4_layer4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case4_layer5.png" alt="bike" />
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case5_layer1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case5_layer2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case5_layer3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case5_layer4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case5_layer5.png" alt="bike" />
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case6_layer1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case6_layer2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case6_layer3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case6_layer4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case6_layer5.png" alt="bike" />
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case7_layer1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case7_layer2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case7_layer3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case7_layer4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/layer/case7_layer5.png" alt="bike" />
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-widescreen" id="diversity">
+      <div class="section is center has-text-centered ">
+        Our method enables some interesting applications in graphic design.
+        Specifically, given the same input elements, it can compose them to create diverse designs, which provides
+        multiple choices to users (called design variations).
+        It can also achieve design composition on the condition of different canvas sizes (called resolution
+        adjustment).
+        The predicted attributes will be adjusted to suit the canvas size, making the final designs appealing in various
+        canvas sizes.
+        Besides, it can add new element on a existing design to make it more pleasing (called element filling).
+      </div>
+
+      <div class="link-block ">
+        <a href="#top" class="nav-link button-55 is-normal">
+          <span>Go to Top</span>
+        </a>
+      </div>
+      <div id="diversity">
+        <div class="section-title has-text-centered is-centered">
+          <h2 class="title is-3">Design Variations</h2><br>
+        </div>
+
+        <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="column is-three-quarters is-centered">
+            <div class="comparisons_gallery">
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case1_1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case1_2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case1_3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case1_4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case1_5.png" alt="bike" />
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case2_1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case2_2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case2_3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case2_4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case2_5.png" alt="bike" />
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case3_1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case3_2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case3_3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case3_4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case3_5.png" alt="bike" />
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case4_1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case4_2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case4_3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case4_4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case4_5.png" alt="bike" />
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case5_1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case5_2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case5_3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case5_4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case5_5.png" alt="bike" />
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case6_1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case6_2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case6_3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case6_4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case6_5.png" alt="bike" />
+              </div>
+
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case7_1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case7_2.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case7_3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case7_4.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="tradeoff_src_img" src="static/images/diversity/case7_5.png" alt="bike" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light" id="resolution">
+    <div class="container is-widescreen">
+      <div class="link-block ">
+        <a href="#top" class="nav-link button-55 is-normal">
+          <span>Go to Top</span>
+        </a>
+      </div>
+
+      <div class="section-title has-text-centered is-centered">
+        <h2 class="title is-3">Resolution Adjustment</h2>
+        <br>
+        <div class="columns is-centered has-text-centered is-variable is-8">
+          <div class="column is-centered">
+            <div class="limitation_gallery">
+              <div class="captioned_video">
+                <img class="limitation_src_img" src="static/images/resolution/case1.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="limitation_src_img" src="static/images/resolution/case2.png" alt="bike" />
+              </div>
+            </div>
+
+            <div class="limitation_gallery">
+              <div class="captioned_video">
+                <img class="limitation_src_img" src="static/images/resolution/case3.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="limitation_src_img" src="static/images/resolution/case4.png" alt="bike" />
+              </div>
+            </div>
+
+            <div class="limitation_gallery">
+              <div class="captioned_video">
+                <img class="limitation_src_img" src="static/images/resolution/case5.png" alt="bike" />
+              </div>
+              <div class="captioned_video">
+                <img class="limitation_src_img" src="static/images/resolution/case6.png" alt="bike" />
+              </div>
+            </div>
+
+            <div class="content has-text-justified">
+              <p>
+                Our approach composes the same input elements to designs with different canvas sizes.
+                The long side is 1920px and the short side is 1080px.
+                The generated designs are visually appealing in various canvas sizes.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-widescreen" id="filling">
+      <div class="link-block ">
+        <a href="#top" class="nav-link button-55 is-normal">
+          <span>Go to Top</span>
+        </a>
+      </div>
+      <div class="section-title has-text-centered is-centered">
+        <h2 class="title is-3">Element Filling</h2><br>
+      </div>
+      <div class="columns is-centered has-text-centered is-variable is-8">
+        <div class="column is-three-fifths is-centered">
+          <div class="prompt_gallery">
+            <div class="captioned_video">
+              <h6 class="caption">Original</h6>
+            </div>
+            <div class="captioned_video">
+              <h6 class="caption">+ Elements</h6>
+            </div>
+            <div class="captioned_video">
+              <h6 class="caption">Original</h6>
+            </div>
+            <div class="captioned_video">
+              <h6 class="caption">+ Elements</h6>
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case1_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case1_2.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case2_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case2_2.png" alt="bike" />
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case3_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case3_2.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case4_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case4_2.png" alt="bike" />
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case5_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case5_2.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case6_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case6_2.png" alt="bike" />
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case7_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case7_2.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case8_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case8_2.png" alt="bike" />
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case9_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case9_2.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case10_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case10_2.png" alt="bike" />
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case11_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case11_2.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case12_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case12_2.png" alt="bike" />
+            </div>
+            
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case13_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case13_2.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case14_1.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case14_2.png" alt="bike" />
+            </div>
+
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case15_2.png" alt="bike" />
+            </div>
+            <div class="captioned_video">
+              <img class="varying_img" src="static/images/filling/case15_1.png" alt="bike" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@InProceedings{Gal_2024_CVPR,
+            author    = {Gal, Rinon and Vinker, Yael and Alaluf, Yuval and Bermano, Amit and Cohen-Or, Daniel and Shamir, Ariel and Chechik, Gal},
+            title     = {Breathing Life Into Sketches Using Text-to-Video Priors},
+            booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+            month     = {June},
+            year      = {2024},
+            pages     = {4325-4336}
+        }
+      </code></pre>
+    </div>
+</section> -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              Website content is licensed under a <a rel="license"
+                href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+                Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              Website source code based on the <a href="https://livesketch.github.io/">LiveSketch</a> project page. If
+              you want to reuse their <a href="https://github.com/LiveSketch/livesketch.github.io">source code</a>,
+              please credit them appropriately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=F9CTOhHWj4WXspVMC12A98Pm-af1gZUJ1KCKnzAAyrc&cl=ffffff&w=a"></script>
+</body>
+
+</html>
